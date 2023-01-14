@@ -1,0 +1,117 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.introducao-img {
+  position: relative;
+}
+
+.introducao-img img {
+  border-radius: 5px;
+}
+
+.introducao-img::before {
+  content: "";
+  width: 130px;
+  height: 60px;
+  display: block;
+  background: url("../img/detalhe2.svg") no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -50px;
+  z-index: -1;
+}
+
+.introducao h1::before {
+  content: "";
+  width: 130px;
+  height: 60px;
+  display: block;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: 40px;
+  left: -65px;
+  z-index: -1;
+}
+
+.introducao p {
+  margin-bottom: 42px;
+  position: relative;
+}
+
+.introducao p::after {
+  content: "";
+  display: block;
+  background-image: url("../img/brazil-icon.svg");
+  width: 20px;
+  height: 21px;
+  position: absolute;
+  top: 0px;
+  left: 203px;
+}
+
+.botao {
+  background: linear-gradient(#272ed2, #00057d);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-around;
+  max-width: 241px;
+  border-radius: 5px;
+}
+
+.botao a {
+  text-decoration: none;
+  color: #e3ebff;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+  .introducao h1::before {
+    width: 50px;
+    height: 10px;
+    top: -10px;
+    left: 4px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 800px) {
+    .introducao-img::before {
+      width: 50px;
+      height: 10px;
+      left: 0px;
+      border-radius: 4px;
+    }
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .introducao-img img {
+    display: none;
+  }
+  .introducao-img::before {
+    display: none;
+  }
+}

@@ -1,0 +1,81 @@
+.footer {
+  background: #000000;
+}
+
+.footer-container {
+  max-width: 1200px;
+  padding: 120px 20px 60px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #cccccc;
+}
+
+.footer-contato {
+  position: relative;
+}
+
+.footer-contato li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  right: 0px;
+}
+.footer-contato .email::before {
+  background-image: url("../img/icone-email.svg");
+  width: 35px;
+  height: 25px;
+}
+
+.footer-contato .telefone::before {
+  background-image: url("../img/icone-telefone.svg");
+  width: 35px;
+  height: 35px;
+}
+
+.footer-contato .instagram::before {
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icone-insta.svg");
+}
+.footer-contato li {
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.footer-contato li a {
+  color: #ffffff;
+}
+
+.footer-copy {
+  font-size: 1.125rem;
+  color: #8f8f8f;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-contato li {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .footer-contato li::before {
+    display: none;
+  }
+}
