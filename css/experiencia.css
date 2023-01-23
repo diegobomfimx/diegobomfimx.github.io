@@ -22,11 +22,12 @@
 }
 
 .experiencia-texto {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.33;
   margin-bottom: 60px;
   max-width: 40ch;
   color: #525252;
+  padding-top: 20px;
 }
 
 .experiencia-texto strong {
@@ -70,6 +71,31 @@
   font-weight: bold;
 }
 
+.empresa-link {
+  grid-area: 4;
+  text-decoration: none;
+  color: #525252;
+  width: 50%;
+}
+
+.empresa-link::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 6px;
+  background: url("../img/seta-icon.svg") no-repeat center;
+  position: absolute;
+  bottom: 25px;
+  left: 160px;
+  transition: left 0.3s;
+}
+.empresa-link:hover {
+  color: #000000;
+}
+.empresa-link:hover::after {
+  left: 165px;
+}
+
 .empresa-texto {
   font-size: 0.875rem;
   color: #525252;
@@ -104,8 +130,13 @@
   .experiencia .subtitulo {
     color: #141414;
   }
+
+  .experiencia .subtitulo::before {
+    display: none;
+  }
   .experiencia-texto {
     font-size: 1.25rem;
+    padding-top: initial;
   }
 
   .empresa-ano {
