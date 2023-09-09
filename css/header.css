@@ -16,9 +16,10 @@
 .header-menu li {
   position: relative;
 }
-.header-menu li:hover::before {
+
+.header-menu li::before {
   content: "";
-  width: 59px;
+  width: 0px;
   height: 3px;
   display: block;
   background: #272ed2;
@@ -26,6 +27,11 @@
   border-radius: 5px;
   bottom: -5px;
   left: 15px;
+}
+
+.header-menu li:hover::before {
+  width: 65%;
+  transition: width 0.3s ease;
 }
 
 .header-menu a {
